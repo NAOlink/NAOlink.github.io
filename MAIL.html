@@ -6,10 +6,29 @@
 -->
 <html>
 	<head>
+		
 		<title>NAO Link</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--<link rel="stylesheet" href="mail.css" />-->
+	<!--<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+		<script type="text/javascript">
+   				(function(){
+      				emailjs.init("user_JHU2Mb1LDQX1Esz8R6ndj");
+   						  })();
+			var template_params = {
+   									"reply_to": "reply_to_value",
+   									"from_name": "from_name_value",
+									"to_name": "to_name_value",
+									"message_html": "message_html_value"
+									}
+
+			var service_id = "naolink@itiscuneo.eu";
+			var template_id = "template_9CKjVwQU";
+			emailjs.send(service_id, template_id, template_params);
+		</script> -->
+		
 	</head>
 	<body class="subpage">
 
@@ -34,8 +53,8 @@
 			<section id="One" class="wrapper style3">
 				<div class="inner">
 					<header class="align-center">
-						<p>Eleifend vitae urna</p>
-						<h2>Generic Page Template</h2>
+						<p>E-mail</p>
+						<h2>Contattaci</h2>
 					</header>
 				</div>
 			</section>
@@ -45,7 +64,30 @@
 				<div class="inner">
 					<div class="box">
 						<div class="content">
-							<!-- Form -->
+							<form id="myform" onsubmit="emailjs.sendForm('default_service', 'template_9CKjVwQU', this); return false;" method="post">
+								<label>reply_to</label>
+										<input type="text" name="reply_to" />
+								<label>from_name</label>
+										<input type="text" name="from_name" />
+								<label>to_name</label>
+										<input type="text" name="to_name" />
+								<label>message_html</label>
+										<input type="text" name="message_html" />
+								<br><br>
+								<button>
+									Send
+								</button>
+							</form>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_JHU2Mb1LDQX1Esz8R6ndj");
+   })();
+</script>
+
+		
+							<!-- Form
 								<h3>Form</h3>
 
 								<form method="post" action="#">
@@ -56,7 +98,7 @@
 										<div class="6u$ 12u$(xsmall)">
 											<input type="email" name="email" id="email" value="" placeholder="Email" />
 										</div>
-										<!-- Break -->
+										<!-- Break
 										<div class="12u$">
 											<div class="select-wrapper">
 												<select name="category" id="category">
@@ -68,7 +110,7 @@
 												</select>
 											</div>
 										</div>
-										<!-- Break -->
+										<!-- Break
 										<div class="4u 12u$(small)">
 											<input type="radio" id="priority-low" name="priority" checked>
 											<label for="priority-low">Low Priority</label>
@@ -81,7 +123,7 @@
 											<input type="radio" id="priority-high" name="priority">
 											<label for="priority-high">High Priority</label>
 										</div>
-										<!-- Break -->
+										<!-- Break 
 										<div class="6u 12u$(small)">
 											<input type="checkbox" id="copy" name="copy">
 											<label for="copy">Email me a copy of this message</label>
@@ -90,11 +132,11 @@
 											<input type="checkbox" id="human" name="human" checked>
 											<label for="human">I am a human and not a robot</label>
 										</div>
-										<!-- Break -->
+										<!-- Break 
 										<div class="12u$">
 											<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
 										</div>
-										<!-- Break -->
+										<!-- Break 
 										<div class="12u$">
 											<ul class="actions">
 												<li><input type="submit" value="Send Message" /></li>
@@ -106,7 +148,7 @@
 
 								<hr />
 
-					<!--			<form method="post" action="#">
+							<form method="post" action="#">
 									<div class="row uniform">
 										<div class="9u 12u$(small)">
 											<input type="text" name="query" id="query" value="" placeholder="Query" />
@@ -115,20 +157,24 @@
 											<input type="submit" value="Search" class="fit" />
 										</div>
 									</div>
-								</form> -->
+								</form>-->
 </div>
 					</div>
 				</div>
 			</section>
 
-		<!-- Footer -->
+		<!--Footer-->
 			<footer id="footer">
 				<div class="container">
 					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://m.facebook.com/naolink19" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-						<li><a href="https://www.instagram.com/nao_link19/" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+						<li><a href="https://twitter.com/Nao_Link19" class="icon fa-twitter" target="_blank">
+							<span class="label">Twitter</span></a></li>
+						<li><a href="https://m.facebook.com/naolink19" class="icon fa-facebook" target="_blank">
+							<span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/nao_link19/" class="icon fa-instagram" target="_blank">
+							<span class="label">Instagram</span></a></li>
+						<li><a href="MAIL.HTML" class="icon fa-envelope-o">
+							<span class="label">Email</span></a></li>
 					</ul>
 				</div>
 				<div class="copyright">
@@ -142,6 +188,7 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="mail.js"></script>
 
 	</body>
 </html>
